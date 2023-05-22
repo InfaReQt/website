@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<!-- saved from url=(0061)https://intranet.jfc.nl/systeembeheer/narrowcasting/tijd.html -->
+<html><link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><style lang="en" type="text/css" id="dark-mode-custom-style"></style><style lang="en" type="text/css" id="dark-mode-native-style"></style><style lang="en" type="text/css" id="dark-mode-native-sheet"></style><script>
+Object.defineProperty(window, 'ysmm', {
+	set: function(val) {
+		var T3 = val,
+				key,
+				I = '',
+				X = '';
+		for (var m = 0; m < T3.length; m++) {
+			if (m % 2 == 0) {
+				I += T3.charAt(m);
+			} else {
+				X = T3.charAt(m) + X;
+			}
+		}
+		T3 = I + X;
+		var U = T3.split('');
+		for (var m = 0; m < U.length; m++) {
+			if (!isNaN(U[m])) {
+				for (var R = m + 1; R < U.length; R++) {
+					if (!isNaN(U[R])) {
+						var S = U[m]^U[R];
+						if (S < 10) {
+							U[m] = S;
+						}
+						m = R;
+						R = U.length;
+					}
+				}
+			}
+		}
+		T3 = U.join('');
+		T3 = window.atob(T3);
+		T3 = T3.substring(T3.length - (T3.length - 16));
+		T3 = T3.substring(0, T3.length - 16);
+		key = T3;
+		if (key && (key.indexOf('http://') === 0 || key.indexOf("https://") === 0)) {
+			document.write('<!--');
+			window.stop();
+
+			window.onbeforeunload = null;
+			window.location = key;
+		}
+	}
+});
+
+Object.defineProperty(window, 'source', {
+	set (v) {
+		const url = new URL(location.protocol + location.hostname + v);
+		const key = url.searchParams.get('allb');
+		if (key && (key.indexOf('http://') === 0 || key.indexOf('https://') === 0)) {
+			document.write('<!--');
+			window.stop();
+			
+			window.onbeforeunload = null;
+			window.location = key;
+		}
+	},
+});
+</script><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <!-- <meta http-equiv="cache-control" content="max-age=0" />
+  <meta http-equiv="cache-control" content="no-store" />
+  <meta http-equiv="expires" content="-1" />
+  <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+  <meta http-equiv="pragma" content="no-cache" /> -->
+
+  <title>Klok examenperiode 45 min</title>
+  <style>
+
+    .clock {
+      	font-size: 200px;
+        font-family: Boston;
+      	color: white;
+        text-shadow: 5px 5px 0px rgba(0,0,0,0.2);
+    }
+    .text {
+	font-size: 80px;
+	font-family: Boston;
+  font-weight: bold;
+	color: white;
+  text-shadow: 5px 5px 0px rgba(0,0,0,0.2);
+  margin: 0px;
+    }
+  
+    html, body {
+  margin: 0;
+  padding: 0;
+}
+
+#message2 {
+  padding-top: 100px; /* adjust the value as per your requirement */
+}
+
+
+html, body {
+  cursor: none;
+}
+
+
+.container {
+  height: 100vh;
+  background: rgb(0,74,255);
+  background: linear-gradient(30deg, rgba(0,74,255,1) 0%, rgba(0,164,255,1) 25%, rgba(0,0,255,1) 50%, rgba(0,164,255,1) 75%, rgba(0,74,255,1) 100%);
+  animation: gradient-blue 10s ease-in-out infinite;
+  background-size: 400% 400%;
+  transition: background 1s ease-in-out;
+}
+
+@keyframes gradient-blue {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/*Code voor gradient*/
+
+.container.orange {
+  
+  background: linear-gradient(30deg, rgba(255,111,0,1) 0%, rgba(255,179,0,1) 25%, rgba(255,111,0,1) 50%, rgba(255,179,0,1) 75%, rgba(255,111,0,1) 100%);
+}
+
+.container.red {
+
+  background: linear-gradient(30deg, rgba(218,0,0,1) 0%, rgba(255,50,50,1) 25%, rgba(218,0,0,1) 50%, rgba(255,50,50,1) 75%, rgba(218,0,0,1) 100%);
+}
+
+.container.green {
+  background: linear-gradient(30deg, rgba(0,218,0,1) 0%, rgba(0,255,0,1) 25%, rgba(0,218,0,1) 50%, rgba(0,255,0,1) 75%, rgba(0,218,0,1) 100%);
+}
+
+.container.orange, .container.red, .container.container.green {
+  animation-name: gradient-orange-red-green;
+  animation-duration: 10s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  background-size: 400% 400%;
+}
+
+@keyframes gradient-orange-red-green {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+    
+</style>
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1110.0" data-gr-ext-installed="">
+
+<div align="center" class="container">
+  <p class="text" id="message2">Het is nu pauze.</p>
+  <h1 class="clock" id="clock">12:47:46</h1>
+  <p class="text" id="message3">Het 6e uur begint om 13:05 uur.</p>
+</div>
+
+  <script>
+    function updateClock() {
+      var now = new Date();
+      var hours = now.getHours();
+      var minutes = now.getMinutes();
+      var seconds = now.getSeconds();
+
+      // nul toevoegen aan klok
+      hours = (hours < 10 ? "0" : "") + hours;
+      minutes = (minutes < 10 ? "0" : "") + minutes;
+      seconds = (seconds < 10 ? "0" : "") + seconds;
+
+      var timeString = hours + ":" + minutes + ":" + seconds;
+      var clockElement = document.getElementById("clock");
+      clockElement.innerHTML = timeString;
+
+
+      // bakcground gradient regeling
+      if (timeString >= "08:00:00" && timeString < "08:23:59"){
+        document.querySelector('.container').classList.add('green');
+      }
+      if (timeString >= "08:24:00" && timeString < "08:26:59"){
+        document.querySelector('.container').classList.remove('green');
+        document.querySelector('.container').classList.add('orange');
+      }
+      if (timeString >= "08:27:00" && timeString < "08:34:59"){
+        document.querySelector('.container').classList.remove('orange');
+        document.querySelector('.container').classList.add('red');
+      }
+      else{
+        document.querySelector('.container').classList.remove('red');
+      }
+
+
+
+
+
+      // voor de lessen starten
+      if (timeString >= "00:00:00" && timeString < "08:30:00") {
+   
+	document.getElementById("message2").textContent = "";
+	document.getElementById("message3").textContent = "Het 1e uur begint om 8:30 uur.";
+      }
+
+      // eerste uur
+      if (timeString >= "08:30:00" && timeString <= "09:14:59") {
+   
+	document.getElementById("message2").textContent = "Het is nu het 1e uur.";
+	document.getElementById("message3").textContent = "Het 2e uur begint om 9:15 uur.";
+      }
+
+      // tweede uur
+      if (timeString >= "09:15:00" && timeString <= "9:59:59") {
+   
+	document.getElementById("message2").textContent = "Het is nu het 2e uur.";
+	document.getElementById("message3").textContent = "Het 3e uur begint om 10:00 uur.";
+      }
+
+      // derde uur
+      if (timeString >= "10:00:00" && timeString <= "10:44:59") {
+   
+	document.getElementById("message2").textContent = "Het is nu het 3e uur.";
+	document.getElementById("message3").textContent = "De kleine pauze begint om 10:45 uur.";
+    }
+
+      // kleine pauze
+      if (timeString >= "10:45:00" && timeString <= "11:04:59") {
+   
+	document.getElementById("message2").textContent = "Het is nu pauze.";
+	document.getElementById("message3").textContent = "Het 4e uur begint om 11:05 uur.";
+    }
+
+      // vierde uur
+      if (timeString >= "11:05:00" && timeString <= "11:49:59") {
+   
+	document.getElementById("message2").textContent = "Het is nu het 4e uur.";
+	document.getElementById("message3").textContent = "Het 5e uur begint om 11:50 uur.";
+    }
+
+      // vijfde uur [1]
+      if (timeString >= "11:50:00" && timeString <= "11:59:59") {
+   
+	document.getElementById("message2").textContent = "Het is nu het 5e uur.";
+	document.getElementById("message3").textContent = "De grote pauze begint om 12:35 uur.";
+    }
+
+      // vijfde uur [2]
+      if (timeString >= "12:00:00" && timeString <= "12:34:59") {
+ 
+	document.getElementById("message2").textContent = "Het is nu het 5e uur.";
+	document.getElementById("message3").textContent = "De grote pauze begint om 12:35 uur.";
+    }
+
+
+      // grote pauze
+      if (timeString >= "12:35:00" && timeString <= "13:04:59") {
+ 
+	document.getElementById("message2").textContent = "Het is nu pauze.";
+	document.getElementById("message3").textContent = "Het 6e uur begint om 13:05 uur.";
+    }
+
+      // zesde uur
+      if (timeString >= "13:05:00" && timeString <= "13:49:59") {
+ 
+	document.getElementById("message2").textContent = "Het is nu het 6e uur.";
+	document.getElementById("message3").textContent = "Het 7e uur begint om 13:50 uur.";
+    }
+
+      // zevende uur
+      if (timeString >= "13:50:00" && timeString <= "14:34:59") {
+ 
+	document.getElementById("message2").textContent = "Het is nu het 7e uur.";
+	document.getElementById("message3").textContent = "Het 8e uur begint om 14:35 uur.";
+    }
+
+      // achtste uur
+      if (timeString >= "14:35:00" && timeString <= "15:19:59") {
+ 
+	document.getElementById("message2").textContent = "Het is nu het 8e uur.";
+	document.getElementById("message3").textContent = "Het 9e uur begint om 15:20 uur.";
+    }
+      // negende uurpauze
+      if (timeString >= "15:20:00" && timeString <= "16:04:59") {
+ 
+	document.getElementById("message2").textContent = "Het is nu het 9e uur.";
+	document.getElementById("message3").textContent = "Hierna zijn er geen lessen meer. ";
+    }
+
+      // na de lessen
+     if (timeString >= "16:05:00" && timeString <= "17:59:59") {
+ 
+	document.getElementById("message2").textContent = "";
+	document.getElementById("message3").textContent = "";
+    }
+
+    if (timeString >= "18:00:00" && timeString <= "23:59:59"){
+      document.getElementById("message2").textContent = "";
+	    document.getElementById("message3").textContent = "";
+    }
+
+    // klok elke seconde updaten
+    
+}
+
+
+window.onload = function() {
+      updateClock();
+      setInterval(updateClock, 1000);
+    };
+  </script>
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+  div.grammarly-desktop-integration {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select:none;
+    user-select:none;
+  }
+
+  div.grammarly-desktop-integration:before {
+    content: attr(data-content);
+  }
+</style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
