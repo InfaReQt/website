@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Current Date</title>
+    <style>
+        body {
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        h1 {
+            font-size: 30rem;
+            color: #333;
+            text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <h1 id="date"></h1>
+
+    <script>
+        // Function to get the current date
+        function getCurrentDate() {
+            var currentDate = new Date();
+            var options = { month: 'long', day: 'numeric' };
+            return currentDate.toLocaleDateString('nl', options);
+        }
+
+        // Update the date element with the current date
+        function updateDate() {
+            document.getElementById("date").innerHTML = getCurrentDate();
+        }
+
+        // Update the date every second
+        setInterval(updateDate, 1000);
+    </script>
+</body>
+</html>
