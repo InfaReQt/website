@@ -18,6 +18,11 @@
             text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
             text-align: center;
         }
+
+        /* Styles for the newly added date notation */
+        .date-notation {
+            font-size: 10rem; /* Adjust the font size as needed */
+        }
     </style>
 </head>
 <body>
@@ -27,8 +32,11 @@
         // Function to get the current date
         function getCurrentDate() {
             var currentDate = new Date();
-            var options = { month: 'long', day: 'numeric' };
-            return currentDate.toLocaleDateString('nl', options);
+            var optionsLong = { month: 'long', day: 'numeric' };
+            var optionsShort = { month: '2-digit', day: '2-digit', year: '2-digit' };
+            var longDate = currentDate.toLocaleDateString('nl', optionsLong);
+            var shortDate = currentDate.toLocaleDateString('nl', optionsShort);
+            return longDate + "<br><span class='date-notation'>(" + shortDate + ")</span>";
         }
 
         // Update the date element with the current date
